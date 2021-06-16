@@ -7,15 +7,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import com.example.noteplan.R
-import com.example.noteplan.databinding.ActivityMainBinding
+import com.example.noteplan.databinding.ActivityNoteEditBinding
 
 class NoteEditActivity: AppCompatActivity(){
 
-    private val binding: ActivityMainBinding by lazy {
-        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+    private val binding: ActivityNoteEditBinding by lazy {
+        DataBindingUtil.setContentView<ActivityNoteEditBinding>(this, R.layout.activity_note_edit)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,5 +24,6 @@ class NoteEditActivity: AppCompatActivity(){
             window.statusBarColor = Color.TRANSPARENT
         }
         binding.lifecycleOwner = this
+//        binding.lifecycleOwner = this
     }
 }

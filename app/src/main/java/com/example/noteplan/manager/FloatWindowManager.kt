@@ -50,7 +50,9 @@ companion object{
      * 创建编辑笔记的浮窗
      */
     fun createNoteFloatView(context: Context){
-        val intent: Intent = Intent();
+        val intent: Intent = Intent("com.example.noteplan.ui.activity.NoteEditActivity")
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(intent)
     }
 
 
